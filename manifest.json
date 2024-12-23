@@ -1,0 +1,51 @@
+
+{
+  "manifest_version": 3,
+  "name": "学银在线",
+  "version": "1.0.0",
+  "description": "视频下载",
+  "icons":
+  {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+  },
+  "action":{
+      "default_icon":
+      {
+          "24": "images/icon24.png",
+          "38": "images/icon38.png"
+      }
+  },
+  "author": "YeYeYeYeYe",
+  "content_scripts": [
+      {
+        "matches": ["https://mooc1.xueyinonline.com/*"],
+        "js": ["scripts/jquery-3.7.1.min.js","scripts/main.js","scripts/zhuru.js"],
+        "run_at": "document_end"
+      }
+  ],
+   "host_permissions": [
+      "<all_urls>"
+  ],
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequestFeedback",
+    "storage", "activeTab", "scripting","tabs"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "url": "rules.json",
+        "path": "rules.json"
+      }
+    ]
+  },
+   "web_accessible_resources": [{ 
+    "resources": ["js/inject.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
