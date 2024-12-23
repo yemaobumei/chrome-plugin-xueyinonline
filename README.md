@@ -1,13 +1,13 @@
 # chorme-plugin-jxkp-main
 
 #### 适用范围
-chorme浏览器 
+chorme浏览器， edge浏览器等chromium内核的浏览器
 
 #### 适用网站 
-http://zy.jxkp.net/ 
+https://mooc1.xueyinonline.com/
 
 #### 简介 
-学习课程的时候，一个课程学完了，不会自动跳转回课程列表进行下一个课程，个人觉得这样好麻烦。来个脚本自动化一下吧 于是就简单实现了这个可以直接跳转页面的插件
+学银在线网站视频无法直接下载，会出现403现象。本插件就是为了方便下载视频
 
 #### 安装方法 
 - 下载完项目代码.zip后,直接解压 
@@ -17,10 +17,7 @@ http://zy.jxkp.net/
 - 安装成功 
 
 #### 使用方法 
-- 打开网站 http://zy.jxkp.net/, 登录
-- 选课
-- 点击我的课程[学习记录]，显示已选课程列表，等待页面自动跳转。此时你就可以用电脑做你自己的事了，页面不要关。
+- 打开网站 https://mooc1.xueyinonline.com/, 登录
+- 打开任意视频学习页面，视频左下方会出现红色下载按钮，点击下载
 
-#### 注意
-- 不能关机，待机，关闭电脑长时间自动休眠功能，否则无法计时。
-- 浏览器版本高于88在安装时可能会出现错误警告(不影响正常使用) 这是由于manifest_version的版本为2的缘故。在未来版本3中，background脚本会作为service worker被加载，也就是说不能在后台脚本操作dom了，详见https://developer.chrome.com/docs/extensions/mv3/mv3-migration-checklist/
+

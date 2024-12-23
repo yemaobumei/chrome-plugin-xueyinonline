@@ -10,7 +10,7 @@
 //         downloadUrlFile(downuri, document.title + "." + srctype);
 //     }
 // });
-
+//下载视频到本地------------------------------------------
 function downloadUrlFile(url, fileName) {
     const url2 = url.replace(/\\/g, "/")
     const xhr = new XMLHttpRequest();
@@ -36,20 +36,9 @@ function saveAs(data, name) {
     save_link.download = name;
     save_link.click();
 }
-function getVideoUrl(){
-   // var iframe = document.querySelector("iframe");
-   // var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-   var videos = $("video")
-   if(videos.length >0){
-      var video = videos[0]
-       $("#reader").append("<button  id='#download' style='color:red;font-size:25px;float:left'>下载该视频</button")
-       console.log(1111,$("#download").text())
-       $("#download").click(function (event){
-          console.log(video.title,video.src)
-          downloadUrlFile(video.src,"test")
-       })
-   }
-}
+//下载视频到本地------------------------------------------\
+
+//https://mooc1.xueyinonline.com/mooc-ans/mycourse/studentstudy?chapterId=881144337&courseId=244755117&clazzid=102350738&enc=4d19491a4a140e10a09c12807a2df754
 var monitor1 = setInterval(function() {
     if(!/studentstudy/g.test(window.location.href)){
         return
@@ -84,6 +73,8 @@ var monitor1 = setInterval(function() {
     }
 },2e3)
 
+
+//https://mooc1.xueyinonline.com/mooc-ans/nodedetailcontroller/visitnodedetail?courseId=80015665&knowledgeId=80016702&enc=&mooc2=1
 var monitor2 = setInterval(function (){
     if(!/visitnodedetail/g.test(window.location.href)){
         return
@@ -111,6 +102,5 @@ var monitor2 = setInterval(function (){
            clearInterval(monitor2)
         }
     }
-
 },3e3)
 
